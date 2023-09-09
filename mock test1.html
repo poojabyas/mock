@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .grandfather {
+            border: 1px dotted black;
+            width: 1200px;
+            margin: 20px;
+            padding: 20px;
+            overflow: auto; /* Add this to contain floated elements */
+        }
+
+        .container {
+            width: 100%;
+            display: flex; /* Use flexbox to position the father and uncle boxes */
+            justify-content: space-between; /* Place the father and uncle boxes at opposite ends */
+        }
+
+        .father, .uncle {
+            border: 1px dotted black;
+            width: 48%; /* Adjust the width as needed */
+            padding: 10px;
+            margin-top: 10px;
+            margin: 10px;
+        }
+
+        .person {
+            border: 1px dotted black;
+            width: 90%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .child {
+            border: 1px solid gray;
+            padding: 10px;
+            margin-top: 10px;
+            display: block; /* Display child elements vertically */
+        }
+
+        /* Clearfix to clear floated elements within grandfather */
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+            
+                .person5{
+            vertical-align:middle;
+            border: 1px dotted black;
+            height: 90%;
+            width: 90%;
+            padding: 10px;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        
+       
+    </style>
+</head>
+<body>
+    <div class="grandfather clearfix"> <!-- Add clearfix to clear floated elements -->
+        grandfather
+        <div class="container">
+            <div class="father">
+                father
+                <div class="person5">person
+
+                    <div class="child">child1</div>
+                    <div class="child">child2</div>
+                    <div class="child" style="border: 1px solid black;">child3
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                    </div>
+                </div>
+            </div>
+            <div class="uncle">
+                uncle
+                <div class="person">person1</div>
+                <div class="person">person2
+                    <div class="child">child1</div>
+                    <div class="child">child2</div>
+                    <div class="child">child3
+                        
+                    </div>
+                    <!-- Add three more child div elements here -->
+                    <div class="child" style="background-color: orange;text-align: center;font-weight: bold;">1</div>
+                    <div class="child" style="background-color:white;text-align: center;color: blue;font-weight: bold;">2</div>
+                    <div class="child" style="background-color: green;text-align: center;font-weight: bold;">3</div>
+                </div>
+                <div class="person">person3</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
